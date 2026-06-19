@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ma-therapie.fr/sitemap.xml

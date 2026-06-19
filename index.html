@@ -6,552 +6,44 @@
 <title>Emmanuelle Moranval-Vincent — Thérapeute TCC & Diététicienne à Briançon</title>
 <meta name="description" content="Emmanuelle Moranval-Vincent, thérapeute TCC et nutritionniste-diététicienne D.E. à Briançon. Consultations en cabinet, visio ou téléphone. Anxiété, phobies, dépression, troubles alimentaires.">
 <link rel="stylesheet" href="css/style.css">
-<style>
-/* === HERO === */
-.hero {
-  min-height: 100vh;
-  padding: 7rem 1.5rem 4rem;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 4rem;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -20%; right: -10%;
-  width: 60%; height: 80%;
-  background: radial-gradient(circle, var(--sage-100) 0%, transparent 60%);
-  z-index: 0;
-}
-.hero-content { position: relative; z-index: 2; }
 
-.hero h1 {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(2.6rem, 5.5vw, 4.8rem);
-  line-height: 1.02;
-  letter-spacing: -0.035em;
-  color: var(--sage-800);
-  margin-bottom: 1.8rem;
-  font-weight: 400;
-}
-.hero h1 em { font-style: italic; color: var(--clay); font-weight: 300; }
 
-.hero-desc {
-  font-size: 1.1rem;
-  color: var(--ink-soft);
-  max-width: 520px;
-  margin-bottom: 2.5rem;
-  line-height: 1.7;
-}
-
-.cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-.hero-signals {
-  display: flex;
-  gap: 2.5rem;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--sage-200);
-}
-.signal-item .num {
-  font-family: 'Fraunces', serif;
-  font-size: 2rem;
-  color: var(--clay);
-  line-height: 1;
-  font-weight: 500;
-}
-.signal-item .lbl {
-  font-size: 0.82rem;
-  color: var(--ink-soft);
-  margin-top: 0.4rem;
-}
-
-/* Hero visual */
-.hero-visual { position: relative; z-index: 1; height: 580px; }
-.portrait-frame {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 85%;
-  max-width: 400px;
-  aspect-ratio: 4/5;
-  border-radius: 240px 240px 16px 16px;
-  background:
-    linear-gradient(135deg, rgba(201,123,94,0.15), rgba(138,154,120,0.25)),
-    url('img/therapeute.jpg') center/cover;
-  box-shadow: 0 30px 80px rgba(45, 53, 40, 0.2);
-}
-.portrait-frame::after {
-  content: '';
-  position: absolute;
-  inset: -8px;
-  border: 1px solid var(--sage-400);
-  border-radius: 248px 248px 24px 24px;
-  opacity: 0.4;
-}
-.floating-badge {
-  position: absolute;
-  background: var(--white);
-  padding: 1rem 1.3rem;
-  border-radius: var(--radius-md);
-  box-shadow: 0 12px 40px rgba(45, 53, 40, 0.12);
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-size: 0.9rem;
-}
-.floating-badge .dot {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: #4ade80;
-  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.2);
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.2); }
-  50% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0.1); }
-}
-.badge-1 { top: 12%; left: -3%; }
-.badge-2 { bottom: 10%; right: -3%; font-family: 'Fraunces', serif; font-size: 0.88rem; color: var(--sage-800); }
-.badge-2 .stars { color: var(--clay); font-size: 1rem; }
-
-/* === APPROACH === */
-.approach {
-  padding: 8rem 1.5rem;
-  background: var(--sage-800);
-  color: var(--cream);
-  position: relative;
-}
-.approach h2 em { color: var(--clay-light); }
-.approach .section-lead { color: rgba(250, 246, 239, 0.85); }
-
-.approach-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-}
-.approach-card {
-  background: rgba(250, 246, 239, 0.04);
-  border: 1px solid rgba(250, 246, 239, 0.1);
-  border-radius: var(--radius-lg);
-  padding: 2.5rem;
-  transition: all 0.4s;
-}
-.approach-card:hover {
-  background: rgba(250, 246, 239, 0.08);
-  transform: translateY(-4px);
-}
-.card-num {
-  font-family: 'Fraunces', serif;
-  font-size: 0.95rem;
-  color: var(--clay-light);
-  letter-spacing: 0.15em;
-  margin-bottom: 1.5rem;
-}
-.card-title {
-  font-family: 'Fraunces', serif;
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-}
-.card-title em { font-style: italic; color: var(--clay-light); }
-.card-desc {
-  font-size: 0.98rem;
-  opacity: 0.85;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
-.card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.tag {
-  font-size: 0.78rem;
-  padding: 0.3rem 0.8rem;
-  border: 1px solid rgba(250, 246, 239, 0.2);
-  border-radius: var(--radius-full);
-  color: var(--cream);
-  opacity: 0.85;
-}
-
-/* === EXPERTISE === */
-.expertise {
-  padding: 8rem 1.5rem;
-  background: var(--cream);
-}
-.expertise h2 em { color: var(--clay); }
-.expertise .subtitle {
-  color: var(--ink-soft);
-  font-size: 1.05rem;
-  margin-bottom: 4rem;
-  max-width: 580px;
-}
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-}
-.expertise-item {
-  background: var(--white);
-  padding: 2rem 1.8rem;
-  border-radius: 16px;
-  border: 1px solid var(--sage-100);
-  transition: all 0.3s;
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-  color: inherit;
-}
-.expertise-item:hover {
-  border-color: var(--clay);
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(45, 53, 40, 0.08);
-}
-.exp-icon {
-  width: 44px; height: 44px;
-  background: var(--sage-100);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.2rem;
-  font-size: 1.3rem;
-}
-.expertise-item:hover .exp-icon { background: var(--clay-light); }
-.exp-title {
-  font-family: 'Fraunces', serif;
-  font-size: 1.25rem;
-  color: var(--sage-800);
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-.exp-desc {
-  font-size: 0.9rem;
-  color: var(--ink-soft);
-  line-height: 1.55;
-}
-
-/* === BLOG PREVIEW === */
-.blog-preview {
-  padding: 8rem 1.5rem;
-  background: var(--sage-50);
-}
-.blog-preview h2 em { color: var(--clay); }
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 4rem;
-}
-.article-card {
-  background: var(--white);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--sage-100);
-  transition: all 0.3s;
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-}
-.article-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 40px rgba(45, 53, 40, 0.1);
-  border-color: var(--clay-light);
-}
-.article-card .thumb {
-  height: 180px;
-  background: var(--sage-100);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-.article-card .body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
-.article-card .cat {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--clay);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.article-card h3 {
-  font-family: 'Fraunces', serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--sage-800);
-  margin-bottom: 0.5rem;
-  line-height: 1.35;
-}
-.article-card .excerpt {
-  font-size: 0.88rem;
-  color: var(--ink-soft);
-  line-height: 1.55;
-  flex: 1;
-}
-.article-card .read-more {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: var(--clay);
-  font-weight: 600;
-}
-
-/* === ABOUT === */
-.about {
-  padding: 8rem 1.5rem;
-  background: var(--sage-50);
-}
-.about-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 5rem;
-  align-items: center;
-}
-.about-visual {
-  aspect-ratio: 3/4;
-  border-radius: 12px;
-  background:
-    linear-gradient(135deg, rgba(201,123,94,0.1), rgba(45,53,40,0.2)),
-    url('img/cabinet.jpg') center/cover;
-  position: relative;
-  box-shadow: 0 20px 60px rgba(45, 53, 40, 0.15);
-}
-.about-quote {
-  position: absolute;
-  bottom: -40px; right: -40px;
-  background: var(--cream);
-  padding: 1.8rem 2rem;
-  border-radius: 8px;
-  max-width: 280px;
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--sage-800);
-  line-height: 1.5;
-  box-shadow: 0 15px 45px rgba(45, 53, 40, 0.12);
-}
-.about-quote::before {
-  content: '"';
-  position: absolute;
-  top: -10px; left: 15px;
-  font-size: 4rem;
-  color: var(--clay);
-  font-family: 'Fraunces', serif;
-  line-height: 1;
-}
-.about h2 em { color: var(--clay); font-weight: 300; }
-.about p {
-  color: var(--ink-soft);
-  font-size: 1rem;
-  margin-bottom: 1.2rem;
-  line-height: 1.75;
-}
-.credentials {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--sage-200);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-.cred-item {
-  font-size: 0.9rem;
-  color: var(--sage-800);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-}
-.cred-item::before {
-  content: '✓';
-  color: var(--clay);
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-/* === DIPLOMAS === */
-.diplomas {
-  padding: 8rem 1.5rem;
-  background: var(--cream);
-  position: relative;
-  overflow: hidden;
-}
-.diplomas::before {
-  content: '';
-  position: absolute;
-  top: 10%; left: -10%;
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, var(--sage-100) 0%, transparent 65%);
-  z-index: 0;
-}
-.diplomas-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
-
-.diplomas-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: end;
-  margin-bottom: 5rem;
-}
-.diplomas h2 em { color: var(--clay); }
-.diplomas .header-text {
-  color: var(--ink-soft);
-  font-size: 1.02rem;
-  line-height: 1.7;
-}
-
-.timeline { position: relative; padding-left: 3rem; }
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 11px;
-  top: 12px;
-  bottom: 12px;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--clay) 0%, var(--sage-400) 50%, transparent 100%);
-}
-.timeline-item {
-  position: relative;
-  padding: 1.8rem 2rem;
-  margin-bottom: 1.2rem;
-  display: grid;
-  grid-template-columns: 110px 1fr auto;
-  gap: 2.5rem;
-  align-items: center;
-  background: var(--white);
-  border-radius: var(--radius-md);
-  margin-left: -1rem;
-  border: 1px solid var(--sage-100);
-  transition: all 0.3s;
-}
-.timeline-item:hover {
-  transform: translateX(6px);
-  border-color: var(--clay-light);
-  box-shadow: 0 10px 30px rgba(45, 53, 40, 0.07);
-}
-.timeline-dot {
-  position: absolute;
-  left: -2.8rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 24px; height: 24px;
-  border-radius: 50%;
-  background: var(--cream);
-  border: 2px solid var(--clay);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.timeline-dot::after {
-  content: '';
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--clay);
-}
-.timeline-year {
-  font-family: 'Fraunces', serif;
-  font-size: 1.5rem;
-  color: var(--clay);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-.timeline-content .dipl-title {
-  font-family: 'Fraunces', serif;
-  font-size: 1.22rem;
-  color: var(--sage-800);
-  font-weight: 500;
-  margin-bottom: 0.35rem;
-}
-.timeline-content .dipl-institution {
-  font-size: 0.88rem;
-  color: var(--ink-soft);
-  line-height: 1.5;
-}
-.timeline-badge {
-  font-size: 0.72rem;
-  padding: 0.35rem 0.9rem;
-  border-radius: var(--radius-full);
-  background: var(--sage-100);
-  color: var(--sage-800);
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.timeline-badge.accent { background: var(--clay); color: var(--white); }
-
-.diplomas-footer {
-  margin-top: 3rem;
-  padding: 1.8rem 2rem;
-  background: var(--sage-800);
-  color: var(--cream);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  font-size: 0.95rem;
-}
-.diplomas-footer .icon { font-size: 1.8rem; flex-shrink: 0; }
-.diplomas-footer strong { color: var(--clay-light); }
-
-/* === BOOKING === */
-.booking {
-  padding: 8rem 1.5rem;
-  background: var(--clay);
-  color: var(--white);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.booking::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(45,53,40,0.2) 0%, transparent 50%);
-}
-.booking-inner { position: relative; }
-.booking h2 em { color: rgba(255,255,255,0.85); }
-.booking p {
-  font-size: 1.1rem;
-  opacity: 0.92;
-  margin-bottom: 2.5rem;
-  line-height: 1.65;
-}
-.booking .cta-group { justify-content: center; }
-.booking .btn-primary { background: var(--cream); color: var(--sage-800); }
-.booking .btn-primary:hover { background: var(--sage-800); color: var(--cream); }
-.booking .btn-secondary { color: var(--white); border-color: rgba(255,255,255,0.4); }
-.booking .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
-
-/* === RESPONSIVE === */
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; gap: 3rem; padding: 7rem 1.5rem 3rem; }
-  .hero-visual { height: 420px; }
-  .approach-grid, .expertise-grid, .article-grid { grid-template-columns: 1fr; }
-  .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .diplomas-header { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
-  .timeline { padding-left: 2rem; }
-  .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem; margin-left: 0; }
-  .timeline-item:hover { transform: none; }
-  .timeline-dot { left: -2.3rem; }
-  .timeline-year { font-size: 1.2rem; }
-  .diplomas-footer { flex-direction: column; text-align: center; }
-  .about-quote { position: static; margin-top: 1.5rem; max-width: 100%; }
-  .credentials { grid-template-columns: 1fr; }
-}
-
-/* === FADE IN === */
-.fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
-</style>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ma-therapie.fr/">
+  <meta property="og:title" content="Emmanuelle Moranval-Vincent — Thérapeute TCC & Diététicienne à Briançon">
+  <meta property="og:description" content="Emmanuelle Moranval-Vincent, thérapeute TCC et nutritionniste-diététicienne D.E. à Briançon. Consultations en cabinet, visio ou téléphone. Anxiété, phobies, dépression, troubles alimentaires.">
+  <meta property="og:image" content="https://ma-therapie.fr/img/therapeute.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Emmanuelle Moranval-Vincent — Thérapeute TCC & Diététicienne à Briançon">
+  <meta name="twitter:description" content="Emmanuelle Moranval-Vincent, thérapeute TCC et nutritionniste-diététicienne D.E. à Briançon. Consultations en cabinet, visio ou téléphone. Anxiété, phobies, dépression, troubles alimentaires.">
+  <link rel="canonical" href="https://ma-therapie.fr/">
+  <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+      "name": "Emmanuelle Moranval-Vincent — Thérapeute TCC & Diététicienne",
+      "description": "Thérapeute TCC et nutritionniste-diététicienne D.E. à Briançon. Consultations en cabinet, visio ou téléphone.",
+      "url": "https://ma-therapie.fr",
+      "telephone": "+33 6 14 05 61 10",
+      "email": "contact@ma-therapie.fr",
+      "image": "https://ma-therapie.fr/img/therapeute.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "41 Avenue Professeur Forgues",
+        "addressLocality": "Briançon",
+        "postalCode": "05100",
+        "addressCountry": "FR"
+      },
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "19:00"}
+      ],
+      "priceRange": "€€",
+      "sameAs": ["https://ma-therapie.fr"]
+    }
+  </script>
 </head>
 <body>
 
@@ -663,7 +155,7 @@
     <p class="subtitle">Chaque parcours est unique. Voici les problématiques que je rencontre le plus souvent en cabinet.</p>
     <div class="expertise-grid">
       <a href="articles/anxiete-comment-faire-face.html" class="expertise-item">
-        <div class="exp-icon">◐</div>
+        <div class="exp-icon"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="24" cy="24" r="20" stroke="#6b7a5b" stroke-width="2" fill="#e9ece1" opacity="0.5"/><path d="M18 20c0-1.1.9-2 2-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-8a2 2 0 01-2-2v-2z" fill="#8a9a78" opacity="0.6"/><path d="M22 24l-1 5h6l-1-5" stroke="#6b7a5b" stroke-width="1.8" stroke-linecap="round"/><circle cx="20" cy="17" r="1.5" fill="#b58b6e"/><circle cx="28" cy="17" r="1.5" fill="#b58b6e"/></svg></div>
         <h3 class="exp-title">Anxiété & stress</h3>
         <p class="exp-desc">Inquiétudes qui envahissent le quotidien, crises d'angoisse, tensions constantes.</p>
       </a>
@@ -678,7 +170,7 @@
         <p class="exp-desc">Fatigue persistante, perte d'envie, ruminations, sentiment d'être dépassé.</p>
       </div>
       <a href="articles/faire-face-aux-dependances.html" class="expertise-item">
-        <div class="exp-icon">⚘</div>
+        <div class="exp-icon"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="24" cy="24" r="20" stroke="#6b7a5b" stroke-width="2" fill="#e9ece1" opacity="0.5"/><path d="M18 28l2-10h8l2 10" stroke="#b58b6e" stroke-width="2" stroke-linecap="round"/><path d="M18 28c0 2 2 4 6 4s6-2 6-4" stroke="#8a9a78" stroke-width="1.5" fill="none"/><path d="M22 18l1 4-1 3" stroke="#6b7a5b" stroke-width="1.5" stroke-linecap="round"/><path d="M26 18l-1 4 1 3" stroke="#6b7a5b" stroke-width="1.5" stroke-linecap="round"/></svg></div>
         <h3 class="exp-title">Troubles alimentaires & dépendances</h3>
         <p class="exp-desc">Boulimie, hyperphagie, addictions — retrouver une relation apaisée.</p>
       </a>
@@ -705,7 +197,9 @@
 
     <div class="article-grid">
       <a href="articles/anxiete-comment-faire-face.html" class="article-card">
-        <div class="thumb">◐</div>
+        <div class="thumb">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="24" cy="24" r="20" stroke="#6b7a5b" stroke-width="2" fill="#e9ece1" opacity="0.5"/><path d="M18 20c0-1.1.9-2 2-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-8a2 2 0 01-2-2v-2z" fill="#8a9a78" opacity="0.6"/><path d="M22 24l-1 5h6l-1-5" stroke="#6b7a5b" stroke-width="1.8" stroke-linecap="round"/><circle cx="20" cy="17" r="1.5" fill="#b58b6e"/><circle cx="28" cy="17" r="1.5" fill="#b58b6e"/></svg>
+      </div>
         <div class="body">
           <div class="cat">Anxiété</div>
           <h3>Comment faire face à l'anxiété ?</h3>
@@ -715,7 +209,9 @@
       </a>
 
       <a href="articles/mecanismes-anxiete.html" class="article-card">
-        <div class="thumb">◎</div>
+        <div class="thumb">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="24" cy="24" r="20" stroke="#6b7a5b" stroke-width="2" fill="#e9ece1" opacity="0.5"/><path d="M18 20c0-1.1.9-2 2-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-8a2 2 0 01-2-2v-2z" fill="#8a9a78" opacity="0.6"/><path d="M22 24l-1 5h6l-1-5" stroke="#6b7a5b" stroke-width="1.8" stroke-linecap="round"/><circle cx="20" cy="17" r="1.5" fill="#b58b6e"/><circle cx="28" cy="17" r="1.5" fill="#b58b6e"/></svg>
+      </div>
         <div class="body">
           <div class="cat">Anxiété</div>
           <h3>Les mécanismes de l'anxiété</h3>
@@ -725,7 +221,9 @@
       </a>
 
       <a href="articles/symptomes-anxiete.html" class="article-card">
-        <div class="thumb">◍</div>
+        <div class="thumb">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="24" cy="24" r="20" stroke="#6b7a5b" stroke-width="2" fill="#e9ece1" opacity="0.5"/><path d="M18 20c0-1.1.9-2 2-2h8a2 2 0 012 2v2a2 2 0 01-2 2h-8a2 2 0 01-2-2v-2z" fill="#8a9a78" opacity="0.6"/><path d="M22 24l-1 5h6l-1-5" stroke="#6b7a5b" stroke-width="1.8" stroke-linecap="round"/><circle cx="20" cy="17" r="1.5" fill="#b58b6e"/><circle cx="28" cy="17" r="1.5" fill="#b58b6e"/></svg>
+      </div>
         <div class="body">
           <div class="cat">Anxiété</div>
           <h3>Symptômes de l'anxiété et de la dépression</h3>
@@ -735,7 +233,9 @@
       </a>
 
       <a href="articles/faire-face-aux-dependances.html" class="article-card">
-        <div class="thumb">⚘</div>
+        <div class="thumb">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="24" cy="24" r="20" stroke="#6b7a5b" stroke-width="2" fill="#e9ece1" opacity="0.5"/><path d="M18 28l2-10h8l2 10" stroke="#b58b6e" stroke-width="2" stroke-linecap="round"/><path d="M18 28c0 2 2 4 6 4s6-2 6-4" stroke="#8a9a78" stroke-width="1.5" fill="none"/><path d="M22 18l1 4-1 3" stroke="#6b7a5b" stroke-width="1.5" stroke-linecap="round"/><path d="M26 18l-1 4 1 3" stroke="#6b7a5b" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
         <div class="body">
           <div class="cat">Dépendances</div>
           <h3>Faire face aux dépendances</h3>
@@ -745,7 +245,9 @@
       </a>
 
       <a href="articles/tcc-toxicomanies.html" class="article-card">
-        <div class="thumb">▲</div>
+        <div class="thumb">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="24" cy="24" r="20" stroke="#6b7a5b" stroke-width="2" fill="#e9ece1" opacity="0.5"/><path d="M18 28l2-10h8l2 10" stroke="#b58b6e" stroke-width="2" stroke-linecap="round"/><path d="M18 28c0 2 2 4 6 4s6-2 6-4" stroke="#8a9a78" stroke-width="1.5" fill="none"/><path d="M22 18l1 4-1 3" stroke="#6b7a5b" stroke-width="1.5" stroke-linecap="round"/><path d="M26 18l-1 4 1 3" stroke="#6b7a5b" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
         <div class="body">
           <div class="cat">Dépendances</div>
           <h3>TCC des toxicomanies</h3>
@@ -755,7 +257,9 @@
       </a>
 
       <a href="articles/pratique-tcc-dependances.html" class="article-card">
-        <div class="thumb">✦</div>
+        <div class="thumb">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="24" cy="24" r="20" stroke="#6b7a5b" stroke-width="2" fill="#e9ece1" opacity="0.5"/><path d="M18 28l2-10h8l2 10" stroke="#b58b6e" stroke-width="2" stroke-linecap="round"/><path d="M18 28c0 2 2 4 6 4s6-2 6-4" stroke="#8a9a78" stroke-width="1.5" fill="none"/><path d="M22 18l1 4-1 3" stroke="#6b7a5b" stroke-width="1.5" stroke-linecap="round"/><path d="M26 18l-1 4 1 3" stroke="#6b7a5b" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
         <div class="body">
           <div class="cat">Dépendances</div>
           <h3>Pratique de la TCC dans les dépendances</h3>
