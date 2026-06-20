@@ -1,3 +1,13 @@
+# robots.txt — ma-therapie.fr
+# Cabinet d'Emmanuelle Moranval-Vincent, thérapeute TCC & nutritionniste
+# Site vitrine statique, toutes les pages sont publiques.
+
+# Autoriser tous les robots légitimes (Google, Bing, etc.)
 User-agent: *
 Allow: /
+
+# Politesse : éviter de saturer le serveur
+Crawl-delay: 5
+
+# Plan du site
 Sitemap: https://ma-therapie.fr/sitemap.xml
