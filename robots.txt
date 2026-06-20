@@ -6,8 +6,5 @@
 User-agent: *
 Allow: /
 
-# Politesse : éviter de saturer le serveur
-Crawl-delay: 5
-
 # Plan du site
 Sitemap: https://ma-therapie.fr/sitemap.xml
